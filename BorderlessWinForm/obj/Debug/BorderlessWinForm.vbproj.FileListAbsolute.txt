@@ -9,3 +9,4 @@ C:\Users\Usuario\source\repos\BorderlessWinForm\BorderlessWinForm\obj\Debug\Bord
 C:\Users\Usuario\source\repos\BorderlessWinForm\BorderlessWinForm\obj\Debug\BorderlessWinForm.exe
 C:\Users\Usuario\source\repos\BorderlessWinForm\BorderlessWinForm\obj\Debug\BorderlessWinForm.xml
 C:\Users\Usuario\source\repos\BorderlessWinForm\BorderlessWinForm\obj\Debug\BorderlessWinForm.pdb
+C:\Users\Usuario\source\repos\BorderlessWinForm\BorderlessWinForm\obj\Debug\BorderlessWinForm.vbprojAssemblyReference.cache

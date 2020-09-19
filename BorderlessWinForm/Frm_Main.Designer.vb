@@ -22,23 +22,11 @@ Partial Class Frm_Main
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Lbl_Main_Name = New System.Windows.Forms.Label()
         Me.PanelGradient1 = New BorderlessWinForm.PanelGradient()
         Me.Btn_Main_Exit = New System.Windows.Forms.Button()
+        Me.Lbl_Main_Name = New System.Windows.Forms.Label()
         Me.PanelGradient1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Lbl_Main_Name
-        '
-        Me.Lbl_Main_Name.AutoSize = True
-        Me.Lbl_Main_Name.BackColor = System.Drawing.Color.Transparent
-        Me.Lbl_Main_Name.Font = New System.Drawing.Font("Century Gothic", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_Main_Name.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Lbl_Main_Name.Location = New System.Drawing.Point(188, 246)
-        Me.Lbl_Main_Name.Name = "Lbl_Main_Name"
-        Me.Lbl_Main_Name.Size = New System.Drawing.Size(625, 78)
-        Me.Lbl_Main_Name.TabIndex = 0
-        Me.Lbl_Main_Name.Text = "Borderless WinForm"
         '
         'PanelGradient1
         '
@@ -69,6 +57,18 @@ Partial Class Frm_Main
         Me.Btn_Main_Exit.Text = "r"
         Me.Btn_Main_Exit.UseVisualStyleBackColor = False
         '
+        'Lbl_Main_Name
+        '
+        Me.Lbl_Main_Name.AutoSize = True
+        Me.Lbl_Main_Name.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl_Main_Name.Font = New System.Drawing.Font("Century Gothic", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_Main_Name.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Lbl_Main_Name.Location = New System.Drawing.Point(188, 246)
+        Me.Lbl_Main_Name.Name = "Lbl_Main_Name"
+        Me.Lbl_Main_Name.Size = New System.Drawing.Size(625, 78)
+        Me.Lbl_Main_Name.TabIndex = 0
+        Me.Lbl_Main_Name.Text = "Borderless WinForm"
+        '
         'Frm_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -78,6 +78,7 @@ Partial Class Frm_Main
         Me.Controls.Add(Me.PanelGradient1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Frm_Main"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "BorderlessWinForm"
         Me.PanelGradient1.ResumeLayout(False)
         Me.PanelGradient1.PerformLayout()

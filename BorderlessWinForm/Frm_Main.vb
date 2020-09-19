@@ -1,4 +1,6 @@
-﻿Public Class Frm_Main
+﻿Imports System.Runtime.InteropServices
+
+Public Class Frm_Main
 
     '/*
     '*
@@ -7,9 +9,39 @@
     '*/
 
     ' Movement params
-    Dim IsFormMoving As Boolean = False
-    Dim MouseX As Integer
-    Dim MouseY As Integer
+    Private IsFormMoving As Boolean = False
+    Private MouseX As Integer
+    Private MouseY As Integer
+    ' Shadow WinForm
+    Private Const CS_DROPSHADOW As Integer = 131072
+
+    ' Override the CreateParams property
+    Protected Overrides ReadOnly Property CreateParams() As System.Windows.Forms.CreateParams
+        Get
+            Dim vCreateParams As CreateParams = MyBase.CreateParams
+            ' Check OS Before using XP drop shadow
+            Dim OSVersion As Version = System.Environment.OSVersion.Version()
+            ' Select case...
+            Select Case OSVersion.Major
+                Case Is < 5
+                Case 5
+                    If OSVersion.Minor > 0 Then
+                        vCreateParams.ClassStyle = vCreateParams.ClassStyle Or CS_DROPSHADOW
+                    End If
+                Case Is > 5
+                    vCreateParams.ClassStyle = vCreateParams.ClassStyle Or CS_DROPSHADOW
+                Case Else
+            End Select
+            ' Return value
+            Return vCreateParams
+        End Get
+    End Property
+
+    '/*
+    '*
+    '* INIT COMPONENT
+    '*
+    '*/
 
     Private Sub Frm_Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Center main label
