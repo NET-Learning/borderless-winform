@@ -58,11 +58,11 @@ Partial Class Frm_Main
         Me.Btn_Main_Exit.DialogResult = System.Windows.Forms.DialogResult.Abort
         Me.Btn_Main_Exit.FlatAppearance.BorderSize = 0
         Me.Btn_Main_Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed
-        Me.Btn_Main_Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.Btn_Main_Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.Btn_Main_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_Main_Exit.Font = New System.Drawing.Font("Webdings", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
         Me.Btn_Main_Exit.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Btn_Main_Exit.Location = New System.Drawing.Point(935, 0)
+        Me.Btn_Main_Exit.Location = New System.Drawing.Point(934, 1)
         Me.Btn_Main_Exit.Name = "Btn_Main_Exit"
         Me.Btn_Main_Exit.Size = New System.Drawing.Size(45, 35)
         Me.Btn_Main_Exit.TabIndex = 1
