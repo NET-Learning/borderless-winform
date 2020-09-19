@@ -46,6 +46,8 @@ Public Class Frm_Main
     Private Sub Frm_Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Center main label
         Me.Lbl_Main_Name.Left = (Me.Lbl_Main_Name.Parent.Width / 2) - (Me.Lbl_Main_Name.Width / 2)
+        ' Set style to resizable
+        Me.SetStyle(ControlStyles.ResizeRedraw, True)
     End Sub
 
     Private Sub Btn_Main_Exit_Click(sender As Object, e As EventArgs) Handles Btn_Main_Exit.Click
@@ -84,10 +86,89 @@ Public Class Frm_Main
         IsFormMoving = False
     End Sub
 
+    '/*
+    '*
+    '* INIT PAINT
+    '*
+    '*/
 
     Private Sub Frm_Main_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
         ' Add border to the form
         ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.DarkOrange, ButtonBorderStyle.Solid)
     End Sub
+
+
+
+    '/*
+    '*
+    '* INIT RESIZE API
+    '*
+    '*/
+
+    Private Const HTLEFT As Integer = 10, HTRIGHT As Integer = 11, HTTOP As Integer = 12, HTTOPLEFT As Integer = 13, HTTOPRIGHT As Integer = 14, HTBOTTOM As Integer = 15, HTBOTTOMLEFT As Integer = 16, HTBOTTOMRIGHT As Integer = 17
+
+    Protected Overrides Sub WndProc(ByRef m As System.Windows.Forms.Message)
+        MyBase.WndProc(m)
+        If m.Msg = &H84 Then
+            Dim mp = Me.PointToClient(Cursor.Position)
+
+            If TopLeft.Contains(mp) Then
+                m.Result = CType(HTTOPLEFT, IntPtr)
+            ElseIf TopRight.Contains(mp) Then
+                m.Result = CType(HTTOPRIGHT, IntPtr)
+            ElseIf BottomLeft.Contains(mp) Then
+                m.Result = CType(HTBOTTOMLEFT, IntPtr)
+            ElseIf BottomRight.Contains(mp) Then
+                m.Result = CType(HTBOTTOMRIGHT, IntPtr)
+            ElseIf TopY.Contains(mp) Then
+                m.Result = CType(HTTOP, IntPtr)
+            ElseIf LeftX.Contains(mp) Then
+                m.Result = CType(HTLEFT, IntPtr)
+            ElseIf RightX.Contains(mp) Then
+                m.Result = CType(HTRIGHT, IntPtr)
+            ElseIf BottomY.Contains(mp) Then
+                m.Result = CType(HTBOTTOM, IntPtr)
+            End If
+        End If
+    End Sub
+
+    Dim rng As New Random
+    Function RandomColour() As Color
+        Return Color.FromArgb(255, rng.Next(255), rng.Next(255), rng.Next(255))
+    End Function
+
+    Const ImaginaryBorderSize As Integer = 16
+
+    Function TopY() As Rectangle
+        Return New Rectangle(0, 0, Me.ClientSize.Width, ImaginaryBorderSize)
+    End Function
+
+    Function LeftX() As Rectangle
+        Return New Rectangle(0, 0, ImaginaryBorderSize, Me.ClientSize.Height)
+    End Function
+
+    Function BottomY() As Rectangle
+        Return New Rectangle(0, Me.ClientSize.Height - ImaginaryBorderSize, Me.ClientSize.Width, ImaginaryBorderSize)
+    End Function
+
+    Function RightX() As Rectangle
+        Return New Rectangle(Me.ClientSize.Width - ImaginaryBorderSize, 0, ImaginaryBorderSize, Me.ClientSize.Height)
+    End Function
+
+    Function TopLeft() As Rectangle
+        Return New Rectangle(0, 0, ImaginaryBorderSize, ImaginaryBorderSize)
+    End Function
+
+    Function TopRight() As Rectangle
+        Return New Rectangle(Me.ClientSize.Width - ImaginaryBorderSize, 0, ImaginaryBorderSize, ImaginaryBorderSize)
+    End Function
+
+    Function BottomLeft() As Rectangle
+        Return New Rectangle(0, Me.ClientSize.Height - ImaginaryBorderSize, ImaginaryBorderSize, ImaginaryBorderSize)
+    End Function
+
+    Function BottomRight() As Rectangle
+        Return New Rectangle(Me.ClientSize.Width - ImaginaryBorderSize, Me.ClientSize.Height - ImaginaryBorderSize, ImaginaryBorderSize, ImaginaryBorderSize)
+    End Function
 
 End Class

@@ -42,6 +42,7 @@ Partial Class Frm_Main
         '
         'Btn_Main_Exit
         '
+        Me.Btn_Main_Exit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Btn_Main_Exit.BackColor = System.Drawing.Color.Transparent
         Me.Btn_Main_Exit.DialogResult = System.Windows.Forms.DialogResult.Abort
         Me.Btn_Main_Exit.FlatAppearance.BorderSize = 0
@@ -76,7 +77,9 @@ Partial Class Frm_Main
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(980, 600)
         Me.Controls.Add(Me.PanelGradient1)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.MinimumSize = New System.Drawing.Size(980, 600)
         Me.Name = "Frm_Main"
         Me.Padding = New System.Windows.Forms.Padding(1)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
