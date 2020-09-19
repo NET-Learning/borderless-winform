@@ -1,0 +1,11 @@
+C:\Users\Usuario\source\repos\BorderlessWinForm\BorderlessWinForm\bin\Debug\BorderlessWinForm.exe.config
+C:\Users\Usuario\source\repos\BorderlessWinForm\BorderlessWinForm\bin\Debug\BorderlessWinForm.exe
+C:\Users\Usuario\source\repos\BorderlessWinForm\BorderlessWinForm\bin\Debug\BorderlessWinForm.pdb
+C:\Users\Usuario\source\repos\BorderlessWinForm\BorderlessWinForm\bin\Debug\BorderlessWinForm.xml
+C:\Users\Usuario\source\repos\BorderlessWinForm\BorderlessWinForm\obj\Debug\BorderlessWinForm.Frm_Main.resources
+C:\Users\Usuario\source\repos\BorderlessWinForm\BorderlessWinForm\obj\Debug\BorderlessWinForm.Resources.resources
+C:\Users\Usuario\source\repos\BorderlessWinForm\BorderlessWinForm\obj\Debug\BorderlessWinForm.vbproj.GenerateResource.cache
+C:\Users\Usuario\source\repos\BorderlessWinForm\BorderlessWinForm\obj\Debug\BorderlessWinForm.vbproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\BorderlessWinForm\BorderlessWinForm\obj\Debug\BorderlessWinForm.exe
+C:\Users\Usuario\source\repos\BorderlessWinForm\BorderlessWinForm\obj\Debug\BorderlessWinForm.xml
+C:\Users\Usuario\source\repos\BorderlessWinForm\BorderlessWinForm\obj\Debug\BorderlessWinForm.pdb
