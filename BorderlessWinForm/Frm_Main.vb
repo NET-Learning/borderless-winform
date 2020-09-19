@@ -84,4 +84,10 @@ Public Class Frm_Main
         IsFormMoving = False
     End Sub
 
+
+    Private Sub Frm_Main_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
+        ' Add border to the form
+        ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.DarkOrange, ButtonBorderStyle.Solid)
+    End Sub
+
 End Class

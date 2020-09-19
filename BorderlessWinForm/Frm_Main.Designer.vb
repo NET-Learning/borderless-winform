@@ -35,9 +35,9 @@ Partial Class Frm_Main
         Me.PanelGradient1.Controls.Add(Me.Btn_Main_Exit)
         Me.PanelGradient1.Controls.Add(Me.Lbl_Main_Name)
         Me.PanelGradient1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelGradient1.Location = New System.Drawing.Point(0, 0)
+        Me.PanelGradient1.Location = New System.Drawing.Point(1, 1)
         Me.PanelGradient1.Name = "PanelGradient1"
-        Me.PanelGradient1.Size = New System.Drawing.Size(980, 600)
+        Me.PanelGradient1.Size = New System.Drawing.Size(978, 598)
         Me.PanelGradient1.TabIndex = 1
         '
         'Btn_Main_Exit
@@ -78,6 +78,7 @@ Partial Class Frm_Main
         Me.Controls.Add(Me.PanelGradient1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Frm_Main"
+        Me.Padding = New System.Windows.Forms.Padding(1)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "BorderlessWinForm"
         Me.PanelGradient1.ResumeLayout(False)
